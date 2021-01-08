@@ -1,0 +1,87 @@
+.App {
+  
+}
+
+.navbar-custom {
+  padding: 0 22px 0 37px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 0.05rem 0.01rem rgba(75,75,90,.075);
+}
+
+.left-side-menu-dark {
+  width: 250px;
+  background-color: #323742;
+  bottom: 0;
+  padding: 0 0 30px;
+  position: fixed;
+  top: 72px;
+  z-index: 99;
+}
+
+.left-side-menu-dark .sidebar-content {
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: #adb5bd;
+  text-align: left;
+}
+
+.left-side-menu-dark .sidebar-content ul li {
+  display: block;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  border-left: 3px solid transparent;
+
+}
+.left-side-menu-dark .sidebar-content ul li.active
+{
+  color: #fff;
+  background-color: #5369f8!important;
+}
+
+.left-side-menu-dark .sidebar-content ul li:hover {
+  color: #c8cddc;
+  background-color: #3b414e;
+}
+
+.left-side-menu-dark .sidebar-content ul {
+  list-style: none;
+  padding: 0
+}
+
+.content-page {
+  margin-left: 250px;
+  overflow: hidden;
+  padding: 0 12.5px 5px;
+  min-height: 80vh;
+  margin-top: 72px;
+}
+
+.page-title {
+  padding: 20px 0;
+}
+
+.btn-animated{
+  animation: 2s enlargingButton  linear infinite alternate;
+}
+
+@keyframes enlargingButton {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.rdt_TableHeader {
+  display :none !important;
+}
