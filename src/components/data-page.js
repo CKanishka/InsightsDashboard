@@ -1,10 +1,9 @@
-import React, { useState,useEffect } from "react";
-import {Table} from 'antd';
+import React from "react";
+import { Table } from "antd";
 
 const DataPage = (props) => {
-  
-  const {activeFilter, tableData} = props
- 
+  const { activeFilter, tableData } = props;
+
   return (
     <div className="content-page">
       <div className="container-fluid">
@@ -30,19 +29,25 @@ const DataPage = (props) => {
           <div class="col">
             <div class="card">
               <div class="card-body">
-              {tableData && <React.Fragment>
-                  {activeFilter && <div className="badge-info p-3 font-weight-bold text-capitalize">{activeFilter}</div>}
-                  <Table
-                    dataSource={tableData.rows}
-                    columns={tableData.columns}
-                  />
-                </React.Fragment>}
+                {tableData && (
+                  <React.Fragment>
+                    {activeFilter && (
+                      <div className="badge-info p-3 font-weight-bold text-capitalize">
+                        {activeFilter}
+                      </div>
+                    )}
+                    <Table
+                      dataSource={tableData.rows}
+                      columns={tableData.columns}
+                    />
+                  </React.Fragment>
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>                                   
+    </div>
   );
 };
 

@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import DonutChartCard from "./donut-chart-card";
 import { getCount } from "../utils/data-manipulation";
-import { DataService } from "../data/data-service";
 import loader from "../static/images/loader.svg";
 
 const InsightsPage = (props) => {
   const [countMap, setCountMap] = useState(null);
- 
 
   useEffect(() => {
     setCountMap(getCount());
   }, []);
 
- // Handle Chart Click, sets the current filter state
- const chartClick = (key,index) => {
-  const labels = key === "role" ? Object.keys(countMap.roleCountMap) : Object.keys(countMap.levelCountMap)
-  props.applyFilter(key,labels[index])
-}
+  // Handle Chart Click, sets the current filter state
+  const chartClick = (key, index) => {
+    const labels =
+      key === "role"
+        ? Object.keys(countMap.roleCountMap)
+        : Object.keys(countMap.levelCountMap);
+    props.applyFilter(key, labels[index]);
+  };
   return (
     <div className="content-page">
       <div className="container-fluid">
@@ -44,7 +45,9 @@ const InsightsPage = (props) => {
               <img src={loader} alt="loader"></img>
             </div>
           ) : Object.keys(countMap).length === 0 ? (
-            <div className="alert alert-info p-5 mx-auto">No data available</div>
+            <div className="alert alert-info p-5 mx-auto">
+              No data available
+            </div>
           ) : (
             <React.Fragment>
               <div className="col-md-6 ">
