@@ -48,7 +48,7 @@ const DonutChartCard = ({ values, labels, name, chartClick }) => {
     chartClick(name === "Roles" ? "role" : "level", dataPointIndex);
   };
   return (
-    <div className="card shadow-sm">
+    <div className="card shadow-sm h-100">
       <div className="card-body">
         <h5>{name}</h5>
         <Chart
@@ -57,7 +57,7 @@ const DonutChartCard = ({ values, labels, name, chartClick }) => {
             chart: {
               events: {
                 dataPointSelection: function (event, chartContext, config) {
-                  handleChartClick(config.dataPointIndex)
+                  handleChartClick(config.dataPointIndex);
                 },
               },
             },
